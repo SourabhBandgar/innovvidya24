@@ -1,0 +1,121 @@
+/* Using system fonts for better performance */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  flex: 1;
+  padding-right: 50px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(#6200ea, #ff7f50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.4;
+  font-weight: 800;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: -20px;
+  text-align: center; /* Center-align the text */
+  white-space: pre-line; /* Allow line breaks */
+}
+
+.hero-content p {
+  font-size: 20px;
+  font-family: "Arial", sans-serif; /* Fallback system font */
+  color: #555;
+  margin: 20px 0;
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center; /* Centers vertically if necessary */
+}
+
+.cta-buttons .btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Arial", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block; /* Ensures the button doesn't take up more space than necessary */
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #6200ea;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #3700b3;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #fff;
+  color: #6200ea;
+  border: 2px solid #6200ea;
+}
+
+.btn-secondary:hover {
+  background-color: #6200ea;
+  color: #fff;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-image {
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+}
